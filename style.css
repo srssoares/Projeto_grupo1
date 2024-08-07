@@ -7,9 +7,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #9c9696;
-    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura total da viewport */
+    min-height: 100vh; 
     display: flex;
-    flex-direction: column; /* Organiza os elementos em uma coluna vertical */
+    flex-direction: column;
 }
 
 header {
@@ -22,7 +22,7 @@ header {
 }
 
 .content {
-    flex: 1; /* Faz com que o conteúdo ocupe o espaço restante da página */
+    flex: 1; 
     padding: 20px;
 }
 
@@ -76,7 +76,7 @@ header {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: auto; /* Isso empurra o rodapé para o fundo da página */
+    margin-top: auto; 
 }
 
 .footer-content {
