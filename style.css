@@ -69,6 +69,23 @@ header {
 .dropdowns select:focus {
     border-color: #333;
 }
+.main {
+    color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paineis{
+    
+    color: #242424;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 .footer {
     background-color: #333;
