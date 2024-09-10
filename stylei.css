@@ -1,0 +1,441 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #9c9696;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+header {
+    background: rgba(51, 51, 51, 0.5); /* Cor de fundo transparente */
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* Posiciona o menu sobre a imagem de fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; 
+}
+
+/* Estilizando o link "Cadastre-se" */
+.auth-links a:nth-child(2) {
+    background-color: #f0b70e; /* Cor de fundo padrão */
+    color: #ffffff; /* Cor do texto padrão */
+    padding: 10px 20px; /* Espaçamento interno do link */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Efeito hover para o link "Cadastre-se" */
+.auth-links a:nth-child(2):hover {
+    background-color: #e2b500; /* Cor de fundo quando o mouse está sobre o link */
+    color: #fff; /* Cor do texto quando o mouse está sobre o link */
+}
+
+.logo img {
+    max-width: 100%; /* Ajusta a largura máxima para não ultrapassar o contêiner */
+    height: auto; /* Mantém a proporção da altura */
+    display: block; /* Remove o espaço extra abaixo da imagem */
+}
+
+.content {
+    flex: 1; 
+    padding: 20px;
+    margin-top: 60px; /* Adicionado para compensar o header fixo */
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.nav-links a,
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.nav-links a:hover,
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Seção do título e imagem de fundo */
+.hero { 
+    background-image: url('./img/fundo 01.jpg'); /* Corrigir a barra invertida */
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Altura da seção hero */
+    padding: 0 20px; /* Remover padding superior e inferior */
+    color: white;
+    text-align: center; /* Centralizar o texto horizontalmente */
+    display: flex; /* Usar Flexbox para centralizar o conteúdo verticalmente */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    min-height: 90vh;
+
+    /* Máscara para criar a transição suave na parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+/* Estilizando o título */
+.hero h1 {
+    font-size: 3rem; /* Aumentar o tamanho da fonte */
+    margin: 0; /* Remover margens para ajustar o espaçamento */
+}
+
+/* Garantir que a seção tenha um espaçamento adequado */
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.py-5 h2 {
+    font-size: 2rem; /* Aumentar o tamanho da fonte */
+    border-bottom: 2px solid #000000; /* Linha de separação */
+    padding-bottom: 20px;
+    margin-bottom: 1rem; /* Ajustar a margem inferior para espaçamento entre o título e o parágrafo */
+}
+
+.py-5 p {
+    font-size: 1.2rem; /* Aumentar o tamanho da fonte*/
+    line-height: 1.6; /* Ajustar a altura da linha para melhorar a legibilidade */
+}
+
+/* Ajustar o tamanho da imagem e garantir o alinhamento */
+.right-image {
+        width: 10cm; /* Definindo a largura da imagem */
+        height: 20cm; /* Definindo a altura da imagem */
+        object-fit: cover; /* Ajuste a imagem para cobrir o contêiner sem distorção */
+        display: block; /* Fazendo a imagem ocupar o bloco completo */
+        margin-left: -300rem; /* Move a imagem para a esquerda, ajuste conforme necessário */
+        margin-right: 0; /* Remove a margem à direita, se houver */
+}
+
+/* Garantir que o alinhamento vertical funcione */
+.row {
+    display: flex; /* Flexbox para alinhamento horizontal */
+    align-items: center; /* Alinhamento vertical no centro */
+}
+
+/* Ajustar o texto para alinhamento à esquerda */
+.col-md-6:first-of-type {
+    margin-right: 10rem; /* Espaçamento entre o texto e a imagem */
+    text-align: left; /* Alinhar o texto à esquerda */
+    margin-left: 2rem;
+}
+
+/* Ajustar o padding interno da coluna de texto */
+.col-md-6:first-of-type p {
+    margin: 0; /* Remover margem padrão do parágrafo */
+}
+
+/* Seção de compartilhamento de talento */
+.share-talent {
+    background-image: url('./img/fundo\ 02.jpg');
+    width: auto; height: 13rem;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    margin: 40px 0;
+
+    /* Máscara para criar a transição suave nas bordas superior e inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.share-talent-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background-color: rgba(24, 19, 19, 0.395);
+    padding: 10px;
+    display: inline-block;
+}
+
+.share-talent-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.share-talent-item {
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+.register-button {
+    background-color: #f0b70e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register-button:hover {
+    background-color:#e2b500;
+    ;
+}
+
+/* Seção de depoimentos */
+.testimonial-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #000000;
+}
+
+.testimonial-img {
+    width: 180px; /* Ajuste o tamanho conforme necessário */
+    height: 180px; /* Deve ser igual ao width para manter a proporção 1:1 */
+    object-fit: cover; /* Garante que a imagem seja cortada corretamente para preencher o quadrado */
+    margin-bottom: .8rem; /* Espaçamento abaixo da imagem */
+}
+
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 40px 0;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 20px; /* Espaçamento adicional entre o texto e a linha */
+}
+
+.testimonial-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Seção sobre nós */
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 40px 0;
+}
+
+.about-us-text {
+    max-width: 50%;
+}
+
+.about-us-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000000; /* Linha de separação */
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.about-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+}
+.footer {
+    background-color: #f0b70e;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.footer-content .left, .footer-content .right {
+    flex: 1;
+}
+
+.footer-content .center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-content .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content .social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.app-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.app-links a:hover {
+    text-decoration: underline;
+}
+
+/* layout para tablets e telas menores */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links, .auth-links {
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 30px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-us {
+        flex-direction: column;
+    }
+
+    .about-us-text, .about-us-image {
+        padding: 10px;
+    }
+
+    .about-us-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .testimonials {
+        padding: 10px;
+    }
+
+    .testimonial-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* layout para smartphones em modo paisagem */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-text p {
+        font-size: 0.9rem;
+    }
+
+    .share-talent-content h2 {
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* layout para smartphones em modo retrato */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .hero {
+        padding: 15px 5px;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-us-text p {
+        font-size: 0.8rem;
+    }
+
+    .share-talent-content h2 {
+        font-size: 1.2rem;
+        padding: 5px 8px;
+    }
+
+    .testimonials h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-item {
+        flex: 1 1 100%;
+    }
+}
+
+    
