@@ -19,6 +19,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*background-image: url('./assets/retrato-de-mulher-cantando-no-microfone_107420-96131.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 1000px;
+    height: 400px;*/
 }
 
 .content {
