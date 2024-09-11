@@ -5,11 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encontre seu artista ideal</title>
     <link rel="icon" href="./img/Green_Creative_Music_Logo.webp">
-    <link rel="stylesheet" href="stylei.css">
+    <link rel="stylesheet" href="./stylei.css">
+    <style>
+        /* estilos para os resultados e paginação */
+        .search-results {
+            margin-top: 20px;
+        }
+
+        .result-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination button {
+            margin: 0 5px;
+            border: 1px solid #413f3f; /* Borda do quadrado */
+            background-color: #e0b30e; 
+            padding: 0; 
+            font-size: 0.7rem; 
+            cursor: pointer; 
+            position: relative;
+            font-family: 'Poppins', sans-serif; 
+            display: inline-block; /* largura e altura do botão */
+            width: 20px; 
+            height: 20px; 
+            line-height: 20px; 
+            text-align: center; 
+            border-radius: 3px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">Ibar</div>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo Ibar" width="80">
+        </div>
         <nav class="nav-links">
             <a href="#">Página Inicial</a>
             <a href="#">Depoimentos</a>
@@ -26,62 +63,64 @@
 
     <div class="title">Encontre seu artista ideal</div>
 
-    <div class="dropdowns">
-        <select>
-            <option value="">Selecionar a função</option>
-            <option value="banda">Banda</option>
-            <option value="cantor">Cantor</option>
-            <option value="dj">DJ</option>
-            <option value="grupo">Grupo</option>
-            <option value="instrumentista">Instrumentista</option>
-            <option value="todas">Todas</option>
-            
-        </select>
-        <select>
-            <option value="">Selecionar estilo musical</option>
-            <option value="axé">Axé</option>
-            <option value="bossa nova">Bossa Nova</option>
-            <option value="blues">Blues</option>
-            <option value="dancehall">Dancehall</option>
-            <option value="disco">Disco</option>
-            <option value="forró">Forró</option>
-            <option value="funk">Funk</option>
-            <option value="gospel">Gospel</option>
-            <option value="hip hop">Hip Hop</option>
-            <option value="jazz">Jazz</option>
-            <option value="mpb">MPB</option>
-            <option value="pagode">Pagode</option>
-            <option value="pop">Pop</option>
-            <option value="rap">Rap</option>
-            <option value="reggae">Reggae</option>
-            <option value="rock">Rock</option>
-            <option value="samba">Samba</option>
-            <option value="sertanejo">Sertanejo</option>
-            <option value="soul">Soul</option>
-            <option value="tecnobrega">Tecnobrega</option>
-            <option value="todos">Todos</option>
-
-        </select>
-        <select>
-            <option value="">Selecionar instrumento musical</option>
-            <option value="corda">Corda</option>
-            <option value="metais">Metais</option>
-            <option value="percussão">Percussão</option>
-            <option value="sopro">Sopro</option>
-            <option value="teclado">Teclado</option>
-            <option value="todos">Todos</option>
-
-        </select>
-        <select>
-            <option value="">Selecionar localidade</option>
-            <option value="es">Espírito Santo</option>
-            <option value="mg">Minas Gerais</option>
-            <option value="rj">Rio de Janeiro</option>
-            <option value="sp">São Paulo</option>
-            <option value="todas">Todas</option>
-
-        </select>
+    <div class="search-container">
+        <div class="dropdowns">
+            <select id="function-select">
+                <option value="">Selecionar a função</option>
+                <option value="banda">Banda</option>
+                <option value="cantor">Cantor</option>
+                <option value="dj">DJ</option>
+                <option value="grupo">Grupo</option>
+                <option value="instrumentista">Instrumentista</option>
+                <option value="todas">Todas</option>
+            </select>
+            <select id="style-select">
+                <option value="">Selecionar estilo musical</option>
+                <option value="axé">Axé</option>
+                <option value="bossa nova">Bossa Nova</option>
+                <option value="blues">Blues</option>
+                <option value="dancehall">Dancehall</option>
+                <option value="disco">Disco</option>
+                <option value="forró">Forró</option>
+                <option value="funk">Funk</option>
+                <option value="gospel">Gospel</option>
+                <option value="hip hop">Hip Hop</option>
+                <option value="jazz">Jazz</option>
+                <option value="mpb">MPB</option>
+                <option value="pagode">Pagode</option>
+                <option value="pop">Pop</option>
+                <option value="rap">Rap</option>
+                <option value="reggae">Reggae</option>
+                <option value="rock">Rock</option>
+                <option value="samba">Samba</option>
+                <option value="sertanejo">Sertanejo</option>
+                <option value="soul">Soul</option>
+                <option value="tecnobrega">Tecnobrega</option>
+                <option value="todos">Todos</option>
+            </select>
+            <select id="instrument-select">
+                <option value="">Selecionar instrumento musical</option>
+                <option value="corda">Corda</option>
+                <option value="metais">Metais</option>
+                <option value="percussão">Percussão</option>
+                <option value="sopro">Sopro</option>
+                <option value="teclado">Teclado</option>
+                <option value="todos">Todos</option>
+            </select>
+            <select id="location-select">
+                <option value="">Selecionar localidade</option>
+                <option value="es">Espírito Santo</option>
+                <option value="mg">Minas Gerais</option>
+                <option value="rj">Rio de Janeiro</option>
+                <option value="sp">São Paulo</option>
+                <option value="todas">Todas</option>
+            </select>
+        </div>
+        <button id="search-button" class="search-button">Buscar</button>
     </div>
+
+    <div id="search-results" class="search-results"></div>
+    <div id="pagination" class="pagination"></div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -106,5 +145,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
