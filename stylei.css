@@ -123,6 +123,86 @@ header {
     padding: 0 20px;
 }
 
+.hero-servicos { 
+    background-image: url('./img/retrato-de-mulher-cantando-no-microfone_107420-96131.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh; 
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Máscara para criar a transição suave na parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.hero-servicos h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Estilização da seção geral */
+.paineis {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre os cards */
+    flex-wrap: wrap; /* Faz os itens quebrarem para a linha de baixo em telas pequenas */
+    margin: 20px;
+    
+}
+
+/* Estilização dos cards individuais */
+.card {
+    display: flex;
+    flex-direction: column; /* Coloca a imagem, texto e botão em uma coluna */
+    align-items: center;
+    width: 30%; /* Define a largura de cada card */
+    background-color: #b4b4b4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+}
+
+/* Adiciona um efeito ao passar o mouse sobre o card */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilização das imagens */
+.image-register-service {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilização da legenda (figcaption) */
+figcaption {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+/* Estilização do botão */
+
+
+/* Responsividade: ajusta a largura dos cards em telas menores */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Reduz a largura dos cards para caber melhor */
+    }
+}
+
 /* Seções com padding */
 .py-5 {
     padding: 3rem 20px;
@@ -437,16 +517,17 @@ header {
 }
 
 /* Container principal */
-.container {
+.container-cadastro {
     max-width: 800px;
     margin: 80px auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #b4b4b4;
+    border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container h1 {
+.container-cadastro h1 {
     margin-bottom: 20px;
     font-size: 28px;
     color: #333;
@@ -493,6 +574,60 @@ form button {
 form button:hover {
     background-color: #e2b500;
 }
+
+.helper-text {
+    display: none;
+    font-size: .8rem;
+    color: darkred;
+}
+label {
+    margin-bottom: .2rem;
+    position: relative;
+  }
+  
+  label:not(:first-of-type){
+    margin-top: 1rem;
+  }
+  
+  input {
+    padding: .2rem .5rem;
+  }
+  
+  .helper-text {
+    display: none;
+    font-size: .8rem;
+    color: darkred;
+  }
+
+  /* ---------- Estilos dinâmicos ---------- */
+.required-popup::after {
+    content: "*Campo obrigatório";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #DFDFDF;
+    font-size: .65rem;
+    padding: .2rem .3rem;
+    width: auto;
+    display: block;
+    background-color: #202020;
+  }
+  
+  input.error {
+    border: solid 2px #992020;
+    background-color: #CCBBBB;
+    color: #662020;
+  }
+  
+  input.correct {
+    background-color: #BBCCBB;
+    border: solid 2px #206620;
+    color: #206620;
+  }
+  
+  .visible {
+    display: block;
+  }
 
 /* Estilização do Footer */
 /* Rodapé */

@@ -6,6 +6,7 @@
     <title>Formulário de Inscrição de Músicos</title>
     <link rel="icon" href="./img/Green_Creative_Music_Logo.webp">
     <link rel="stylesheet" href="./stylei.css">
+    <script src="./cadastro.js" defer></script>
 </head>
     
     
@@ -17,17 +18,20 @@
        
     </header>
 
-    <div class="container">
+    <div class="container-cadastro"> <!--foi necessario trocar o nome para acabar com o bug-->
     <h1>Inscrição para Músicos</h1>
     <form action="/submit" method="post">
     <label for="nome">Nome Completo</label>
     <input type="text" id="nome" name="nome" required>
+    <p id="nome-helper" class="helper-text">Mensagem de ajuda</p>
 
     <label for="email">Email</label>
     <input type="email" id="email" name="email" required>
+    <p id="email-helper" class="helper-text">Mensagem de ajuda</p>
 
     <label for="telefone">Telefone</label>
     <input type="tel" id="telefone" name="telefone" required>
+    <p id="email-helper" class="helper-text">Mensagem de ajuda</p>
 
     <label for="genero">Gênero Musical</label>
     <select id="genero" name="genero" required>
@@ -46,15 +50,23 @@
     <label for="descricao">Descrição (Conte-nos mais sobre você e sua música)</label>
     <textarea id="descricao" name="descricao" rows="4" required></textarea>
 
+    <label for="senha">*Senha:</label>
+    <input type="password" id="senha" name="senha">
+    <p id="senha-helper" class="helper-text">Mensagem de ajuda</p>
+
+    <label for="confirma-senha">*Confirmar senha:</label>
+    <input type="password" id="confirma-senha" name="confirma-senha">
+    <p id="confirma-senha-helper" class="helper-text">Mensagem de ajuda</p>
+
     <button type="submit">Enviar Inscrição</button>
     </form>
     </div>
 
-    <footer class="footer">
+   <footer class="footer">
         <div class="footer-content">
             <div class="left">
                 <div class="logo">Ibar</div>
-                <div>© 2024 Ibar. Todos os direitos reservados.</div>
+                <div>© 2024  Ibar. Todos os direitos reservados.</div>
                 <div>Contato: <a href="mailto:contato@ibar.com.br">contato@ibar.com.br</a></div>
             </div>
             <div class="center social-icons">
