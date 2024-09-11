@@ -47,6 +47,7 @@ header {
 .logo {
     display: flex;
     align-items: center; /* Alinha verticalmente a logo */
+    margin-left: 10px;
 }
 
 .logo img {
@@ -85,6 +86,7 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: transparent; /* Cor de fundo padrão */
+    margin-right: 30px;
 }
 
 .auth-links a:nth-child(2) {
@@ -105,7 +107,7 @@ header {
 
 /* Seção do título e imagem de fundo */
 .hero { 
-    background-image: url('./img/fundo 01.jpg'); /* Corrigir a barra invertida */
+    background-image: url(./fundo\ 01.jpg); /* Corrigir a barra invertida */
     background-size: cover;
     background-position: center;
     height: 90vh; /* Altura da seção hero */
@@ -129,10 +131,39 @@ header {
     margin: 0; /* Remover margens para ajustar o espaçamento */
 }
 
+/*titulo e bachground da pagina serviços*/
+
+.hero1 { 
+    background-image: url(./assets/retrato-de-mulher-cantando-no-microfone_107420-96131.jpg); /* Corrigir a barra invertida */
+    background-size: cover;
+    background-position: center;
+    height: 90vh; /* Altura da seção hero */
+    padding: 0 20px; /* Remover padding superior e inferior */
+    color: white;
+    text-align: center; /* Centralizar o texto horizontalmente */
+    display: flex; /* Usar Flexbox para centralizar o conteúdo verticalmente */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    min-height: 90vh;
+    width: 100%;
+    
+
+    /* Máscara para criar a transição suave na parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+/* Estilizando o título */
+.hero1 h1 {
+    font-size: 3rem; /* Aumentar o tamanho da fonte */
+    margin: 0; /* Remover margens para ajustar o espaçamento */
+}
+
 /* Garantir que a seção tenha um espaçamento adequado */
 .py-5 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    margin-left: 20px;
 }
 
 .py-5 h2 {
@@ -211,6 +242,64 @@ header {
     font-size: 1.2rem;
 }
 
+/*paineis da pagina serviços*/
+.paineis {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espaço entre os cards */
+    
+    margin: 20px;
+}
+
+/* Estilização dos cards individuais */
+.card {
+    display: flex;
+    flex-direction: column; /* Coloca a imagem, texto e botão em uma coluna */
+    align-items: center;
+    width: 30%; /* Define a largura de cada card */
+    background-color: #b9b9b9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Adiciona um efeito ao passar o mouse sobre o card */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilização das imagens */
+.image-register-service {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilização da legenda (figcaption) */
+figcaption {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+    
+}
+    
+   
+    
+
+.image-register-service {
+    width: 300px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+
 .register-button {
     background-color: #f0b70e;
     color: white;
@@ -220,6 +309,7 @@ header {
     cursor: pointer;
     border-radius: 5px;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 .register-button:hover {
