@@ -10,12 +10,12 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <img src="logo.png" alt="Logo Ibar" width="80">
+            <img src="./img/logo.png" alt="Logo Ibar" width="80">
         </div>
         <nav class="nav-links">
             <a href="#">Página Inicial</a>
-            <a href="#">Depoimentos</a>
-            <a href="#">Sobre Nós</a>
+            <a href="#testimonials">Depoimentos</a>
+            <a href="#about-us">Sobre Nós</a>
             <a href="#">Encontre um Artista</a>
             <a href="#">Serviços</a>
             <a href="#">Fale Conosco</a>
@@ -62,7 +62,7 @@
     </section>
 
     <!-- Seção de depoimentos -->
-    <section class="testimonials">
+    <section id="testimonials" class="testimonials">
         <h2>O que os nossos usuários estão dizendo</h2>
         <div class="testimonial-items">
             <div class="testimonial-item">
@@ -78,12 +78,14 @@
             <div class="testimonial-item">
                 <img src="./img/usuaria3.jpg" class="testimonial-img" alt="Foto Usuário 3">
                 <h3>Dandara</h3>
-                <p>"A plataforma facilitou muito a minha vida como música. Graças a isso, tenho tocado em eventos incríveis e alcançado um público maior."</p>
+                <p>"A platforma facilitou muito a minha vida como música. Graças a isso, tenho tocado em eventos incríveis e alcançado um público maior."</p>
+
             </div>            
     </section>
 
     <!-- Seção sobre nós -->
-    <section class="about-us">
+    <section id="about-us" class="about-us">
+
         <div class="about-us-text">
             <h2>Sobre Nós</h2>
             <p>Somos uma plataforma de intermediação de serviços musicais dedicada a conectar músicos talentosos com eventos e bares que necessitam de cantores e bandas. Nosso objetivo é facilitar a comunicação, negociação e contratação de artistas, proporcionando uma experiência única e memorável para todos os envolvidos. Unimos a paixão pela música à necessidade de entretenimento de qualidade, criando oportunidades para músicos e organizadores de eventos se encontrarem e realizarem shows inesquecíveis.</p>
@@ -115,5 +117,8 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
+
+
