@@ -146,7 +146,6 @@ header {
     margin: 0;
     padding: 0 20px;
 }
-
 /* Estilização da seção geral */
 .paineis {
     display: flex;
@@ -689,7 +688,7 @@ label.required-popup::after {
     background-image: url('./img/fundo_encontre\ um\ artista.jpg'); /* Corrigir a barra invertida */
     background-size: cover;
     background-position: center;
-    padding: 0 20px; /* Remover padding superior e inferior */
+    padding: 0 20px;/* Remover padding superior e inferior */
     color: white;
     text-align: center; /* Centralizar o texto horizontalmente */
     display: flex; /* Usar Flexbox para centralizar o conteúdo verticalmente */
@@ -707,7 +706,6 @@ label.required-popup::after {
 
 .title {
     text-align: center;
-    margin: 20px 0;
     font-size: 3em;
     font-weight: 600;
 }
