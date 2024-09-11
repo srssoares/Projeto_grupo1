@@ -576,9 +576,6 @@ form button:hover {
 }
 
 
-  
-
-
   /* ---------- Estilos dinâmicos ---------- */
 .required-popup::after {
     content: "*Campo obrigatório";
@@ -667,4 +664,75 @@ form button:hover {
 
 .app-links a:hover {
     text-decoration: underline;
+}
+
+/* Encontre um artista*/
+
+.title{
+    background-image: url('./img/fundo_encontre\ um\ artista.jpg'); /* Corrigir a barra invertida */
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px; /* Remover padding superior e inferior */
+    color: white;
+    text-align: center; /* Centralizar o texto horizontalmente */
+    display: flex; /* Usar Flexbox para centralizar o conteúdo verticalmente */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    width: 100%;
+    height: 100vh; /* Garante que a altura da seção ocupe 100% da altura da viewport */
+    margin: 0; /* Remove qualquer margem extra */
+    box-sizing: border-box; 
+
+    /* Máscara para criar a transição suave na parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+/* Container de busca */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espaçamento entre os dropdowns e o botão */
+    margin: 20px auto; /* Margem ao redor do container */
+    max-width: 1000px; /* Largura máxima */
+}
+
+.dropdowns {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os dropdowns */
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #f0b70e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-button:hover {
+    background-color: #e2b500; 
+}
+
+.dropdowns select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.dropdowns select:focus {
+    border-color: #333;
 }
