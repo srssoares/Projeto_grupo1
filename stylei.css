@@ -1,0 +1,408 @@
+/* Importando a fonte Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #9c9696;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background: rgba(51, 51, 51, 0.5); /* Cor de fundo transparente */
+    color: white;
+    padding: 10px 20px; /* Espaçamento interno*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixar o menu no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garantir que o header esteja acima de outros elementos */
+}
+
+/* Estilizando o link "Cadastre-se" */
+.auth-links a:nth-child(2) {
+    background-color: #f0b70e; /* Cor de fundo*/
+    color: #ffffff; /* Cor do texto*/
+    padding: 10px 20px; /* Espaçamento interno do link */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Efeito hover para o link "Cadastre-se" */
+.auth-links a:nth-child(2):hover {
+    background-color: #e2b500; /* Cor de fundo quando o mouse está sobre o link */
+    color: #fff; /* Cor do texto quando o mouse está sobre o link */
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 150px; /* Limitar a largura da logo */
+    height: auto;
+}
+
+/* Links de navegação e autenticação */
+.nav-links, .auth-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links {
+    flex: 2;
+    justify-content: center;
+}
+
+.nav-links a, .auth-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.auth-links a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.auth-links a:nth-child(2) {
+    background-color: #f0b70e; 
+    color: #ffffff;
+}
+
+.auth-links a:nth-child(2):hover {
+    background-color: #e2b500;
+}
+
+/* Conteúdo principal */
+.content {
+    flex: 1; 
+    padding: 20px;
+    margin-top: 60px; /* Compensa o header fixo */
+}
+
+/* Seção Hero */
+.hero { 
+    background-image: url('./img/fundo 01.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh; 
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Máscara para criar a transição suave na parte inferior */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Seções com padding */
+.py-5 {
+    padding: 3rem 20px;
+    text-align: center;
+}
+
+.py-5 h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 20px;
+    margin-bottom: 1rem;
+}
+
+.py-5 p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Limitar a largura do texto */
+}
+
+/* Seção Sobre Nós */
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px 20px;
+    margin: 40px 0;
+    gap: 20px; /* Espaçamento entre o texto e a imagem */
+}
+
+.about-us-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-us-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 20px;
+}
+
+.about-us-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.about-us-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Seção Compartilhar Talento */
+.share-talent {
+    background-image: url('./img/fundo 02.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    margin: 40px 0;
+}
+
+.share-talent-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    background-color: rgba(24, 19, 19, 0.395);
+    padding: 10px;
+    display: inline-block;
+}
+
+.share-talent-info {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.share-talent-item {
+    font-size: 1.2rem;
+}
+
+.register-button {
+    background-color: #f0b70e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register-button:hover {
+    background-color: #e2b500;
+}
+
+/* Seção Depoimentos */
+.testimonials {
+    text-align: center;
+    padding: 50px 20px;
+    margin: 40px 0;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 20px;
+}
+
+.testimonial-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.8rem;
+}
+
+.testimonial-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.testimonial-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #f0b70e;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-content .left, .footer-content .right {
+    flex: 1;
+}
+
+.footer-content .center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content .social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-content .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content .social-icons svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.app-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.app-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+/* para tablets e telas menores */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-text, .about-us-image {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .testimonial-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* para smartphones em modo paisagem */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-us-text p {
+        font-size: 0.9rem;
+    }
+
+    .share-talent-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* para smartphones em modo retrato */
+@media (max-width: 576px) {
+    .hero {
+        padding: 15px 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .about-us-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .about-us-text p {
+        font-size: 0.8rem;
+    }
+
+    .share-talent-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonials h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonial-item {
+        flex: 1 1 100%;
+    }
+}
