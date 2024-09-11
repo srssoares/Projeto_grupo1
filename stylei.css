@@ -593,21 +593,38 @@ form button:hover {
     background-color: #202020;
   }
   
-  input.error {
-    border: solid 2px #992020;
-    background-color: #CCBBBB;
-    color: #662020;
-  }
-  
-  input.correct {
-    background-color: #BBCCBB;
-    border: solid 2px #206620;
-    color: #206620;
-  }
-  
-  .visible {
+  /* Estilo do helper (mensagens de erro ou ajuda) */
+.helper {
+    display: none;
+    color: #f00;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.helper.visible {
     display: block;
-  }
+}
+
+/* Estilo de campos corretos */
+input.correct {
+    border-color: #28a745;
+    background-color: #e6ffed;
+}
+/* Estilo de campos incorretos */
+input.error {
+    border-color: #dc3545;
+    background-color: #ffe6e6;
+}
+/* Ajustes de posição do popup */
+label.required-popup {
+    position: relative;
+}
+
+label.required-popup::after {
+    left: calc(100% + 10px);
+    top: 0;
+    white-space: nowrap;
+}
 
 /* Estilização do Footer */
 /* Rodapé */

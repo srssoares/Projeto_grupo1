@@ -1,0 +1,73 @@
+/* Estilos gerais do formulário */
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    font-family: "poppins", sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Estilo do input */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Estilo do helper (mensagens de erro ou ajuda) */
+.helper {
+    display: none;
+    color: #f00;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.helper.visible {
+    display: block;
+}
+
+/* Estilo de campos corretos */
+input.correct {
+    border-color: #28a745;
+    background-color: #e6ffed;
+}
+
+/* Estilo de campos incorretos */
+input.error {
+    border-color: #dc3545;
+    background-color: #ffe6e6;
+}
+
+/* Estilo para o popup obrigatório */
+.required-popup::after {
+    content: "Campo obrigatório";
+    color: white;
+    background-color: #ffc107;
+    padding: 5px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+/* Ajustes de posição do popup */
+label.required-popup {
+    position: relative;
+}
+
+label.required-popup::after {
+    left: calc(100% + 10px);
+    top: 0;
+    white-space: nowrap;
+}

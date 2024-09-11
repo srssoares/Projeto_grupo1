@@ -1,81 +1,128 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("form");
-
-    form.addEventListener("submit", (event) => {
-        // Impede o envio do formulário se houver erros
-        if (!validateForm()) {
-            event.preventDefault();
-        }
+// ---------- Função Mostrar PopUp ---------- //
+function mostrarPopUp(input, label) {
+    // Mostrar popup de campo obrigatório
+    input.addEventListener('focus', function() {
+        label.classList.add('required-popup');
     });
 
-    function validateForm() {
-        let isValid = true;
+    // Ocultar popup de campo obrigatório
+    input.addEventListener('blur', function() {
+        label.classList.remove('required-popup');
+    });
+}
 
-        // Valida o nome
-        const nomeInput = document.getElementById("nome");
-        const nomeLabel = document.querySelector("label[for='nome']");
-        if (nomeInput.value.trim() === "") {
-            nomeLabel.style.border = "2px solid red";
-            isValid = false;
-        } else {
-            nomeLabel.style.border = "2px solid green";
-        }
+// ---------- VALIDAÇÃO NOME ---------- //
+let nome = document.getElementById("nome");
+let nomeLabel = document.querySelector('label[for="nome"]');
+let nomeHelper = document.getElementById("nome-helper");
 
-        // Valida o email
-        const emailInput = document.getElementById("email");
-        const emailLabel = document.querySelector("label[for='email']");
-        if (!validateEmail(emailInput.value)) {
-            emailLabel.style.border = "2px solid red";
-            isValid = false;
-        } else {
-            emailLabel.style.border = "2px solid green";
-        }
+mostrarPopUp(nome, nomeLabel);
 
-        // Valida o telefone
-        const telefoneInput = document.getElementById("telefone");
-        const telefoneLabel = document.querySelector("label[for='telefone']");
-        if (telefoneInput.value.trim() === "") {
-            telefoneLabel.style.border = "2px solid red";
-            isValid = false;
-        } else {
-            telefoneLabel.style.border = "2px solid green";
-        }
+// Validar valor do input
+nome.addEventListener("change", function(evento) {
+    let valor = evento.target.value;
 
-        // Valida o link de música
-        const linkInput = document.getElementById("link_musica");
-        const linkLabel = document.querySelector("label[for='link_musica']");
-        if (!validateURL(linkInput.value)) {
-            linkLabel.style.border = "2px solid red";
-            isValid = false;
-        } else {
-            linkLabel.style.border = "2px solid green";
-        }
-
-        // Valida a senha e a confirmação
-        const senhaInput = document.getElementById("senha");
-        const confirmaSenhaInput = document.getElementById("confirma-senha");
-        const senhaLabel = document.querySelector("label[for='senha']");
-        const confirmaSenhaLabel = document.querySelector("label[for='confirma-senha']");
-
-        if (senhaInput.value !== confirmaSenhaInput.value || senhaInput.value.trim() === "") {
-            senhaLabel.style.border = "2px solid red";
-            confirmaSenhaLabel.style.border = "2px solid red";
-            isValid = false;
-        } else {
-            senhaLabel.style.border = "2px solid green";
-            confirmaSenhaLabel.style.border = "2px solid green";
-        }
-
-        return isValid;
+    if (valor.length < 3) {
+        nome.classList.remove('correct');
+        nome.classList.add('error');
+        nomeHelper.classList.add('visible');
+        nomeHelper.innerText = "Seu nome deve conter 3 ou mais letras, digite novamente.";
+    } else {
+        nome.classList.remove('error');
+        nome.classList.add('correct');
+        nomeHelper.classList.remove('visible');
     }
+});
 
-    function validateEmail(email) {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
+// ---------- VALIDAÇÃO EMAIL ---------- //
+let email = document.getElementById("email");
+let emailLabel = document.querySelector('label[for="email"]');
+let emailHelper = document.getElementById("email-helper");
+
+mostrarPopUp(email, emailLabel);
+
+// Validar valor do input
+email.addEventListener("change", function(evento) {
+    let valor = evento.target.value;
+
+    if (valor.includes("@") && valor.includes(".com")) {
+        email.classList.remove("error");
+        emailHelper.classList.remove("visible");
+        email.classList.add("correct");
+    } else {
+        email.classList.remove("correct");
+        email.classList.add("error");
+        emailHelper.innerText = "E-mail inválido! Por favor coloque um email válido!";
+        emailHelper.classList.add("visible");
     }
+});
 
-    function validateURL(url) {
-        const urlPattern = /^(https?:\/\/)?([\w\d-]+\.){1,}\.[\w]{2,}(\/.*)?$/;
-        return urlPattern.test(url);
+// ---------- VALIDAÇÃO TELEFONE ---------- //
+let telefone = document.getElementById("telefone");
+let telefoneLabel = document.querySelector('label[for="telefone"]');
+let telefoneHelper = document.getElementById("telefone-helper");
+
+mostrarPopUp(telefone, telefoneLabel);
+
+// Validar valor do input
+telefone.addEventListener("change", function(evento) {
+    let valor = evento.target.value;
+
+    // Simples validação de telefone (mínimo 10 dígitos)
+    if (valor.length >= 10) {
+        telefone.classList.remove("error");
+        telefone.classList.add("correct");
+        telefoneHelper.classList.remove("visible");
+    } else {
+        telefone.classList.remove("correct");
+        telefone.classList.add("error");
+        telefoneHelper.innerText = "Telefone inválido! Deve conter pelo menos 10 dígitos.";
+        telefoneHelper.classList.add("visible");
+    }
+});
+
+// ---------- VALIDAÇÃO SENHA ---------- //
+let senha = document.getElementById("senha");
+let senhaLabel = document.querySelector('label[for="senha"]');
+let senhaHelper = document.getElementById("senha-helper");
+
+mostrarPopUp(senha, senhaLabel);
+
+// Validar valor da senha
+senha.addEventListener("change", function(evento) {
+    let valor = evento.target.value;
+
+    if (valor.length >= 8) {
+        senha.classList.remove("error");
+        senha.classList.add("correct");
+        senhaHelper.classList.remove("visible");
+    } else {
+        senha.classList.remove("correct");
+        senha.classList.add("error");
+        senhaHelper.innerText = "A senha deve conter pelo menos 8 caracteres.";
+        senhaHelper.classList.add("visible");
+    }
+});
+
+// ---------- VALIDAÇÃO CONFIRMAÇÃO DE SENHA ---------- //
+let confirmaSenha = document.getElementById("confirma-senha");
+let confirmaSenhaLabel = document.querySelector('label[for="confirma-senha"]');
+let confirmaSenhaHelper = document.getElementById("confirma-senha-helper");
+
+mostrarPopUp(confirmaSenha, confirmaSenhaLabel);
+
+// Validar valor da confirmação de senha
+confirmaSenha.addEventListener("change", function(evento) {
+    let valor = evento.target.value;
+
+    if (valor === senha.value) {
+        confirmaSenha.classList.remove("error");
+        confirmaSenha.classList.add("correct");
+        confirmaSenhaHelper.classList.remove("visible");
+    } else {
+        confirmaSenha.classList.remove("correct");
+        confirmaSenha.classList.add("error");
+        confirmaSenhaHelper.innerText = "As senhas não coincidem.";
+        confirmaSenhaHelper.classList.add("visible");
     }
 });
