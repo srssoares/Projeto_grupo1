@@ -575,29 +575,9 @@ form button:hover {
     background-color: #e2b500;
 }
 
-.helper-text {
-    display: none;
-    font-size: .8rem;
-    color: darkred;
-}
-label {
-    margin-bottom: .2rem;
-    position: relative;
-  }
+
   
-  label:not(:first-of-type){
-    margin-top: 1rem;
-  }
-  
-  input {
-    padding: .2rem .5rem;
-  }
-  
-  .helper-text {
-    display: none;
-    font-size: .8rem;
-    color: darkred;
-  }
+
 
   /* ---------- Estilos dinâmicos ---------- */
 .required-popup::after {
