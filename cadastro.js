@@ -154,3 +154,41 @@ else {
         enderecoHelper.classList.add("visible");
     }
 });
+
+
+// ---------- VALIDAÇÃO LINK PARA MÚSICA OU VÍDEO ---------- //
+let linkMusica = document.getElementById('link_musica');
+let linkMusicaLabel = document.querySelector('label[for="link_musica"]');
+let linkMusicaHelper = document.getElementById('link-musica-helper');
+
+mostrarPopUp(linkMusica, linkMusicaLabel);
+
+// Validar valor do input
+linkMusica.addEventListener("change", function(evento) {
+    
+  
+let valor = evento.target.value;
+
+    // Simples validação de URL
+const urlPattern = new RegExp('^(https?:\\/\\/)?'+ // protocol   
+'((([a-z\\d](?!-))([a-z\\d-]{0,61}[a-z\\d])?\\.)+[a-z]{2,6}|'+ // domain name     
+'localhost|'+ // localhost 
+'\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}|'+ // IPv4
+'\\[?[a-f\\d]*:[a-f\\d:]+\\]?)'+ // IPv6 
+'(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path  
+'(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+'(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+
+    if (urlPattern.test(valor)) {
+        linkMusica.classList.remove("error");
+        linkMusica.classList.add("correct");
+        linkMusicaHelper.classList.remove("visible");
+    } else {
+        linkMusica.classList.remove("correct");
+        linkMusica.classList.add("error");
+        linkMusicaHelper.innerText = "Por favor, insira um link válido para música ou vídeo.";
+        linkMusicaHelper.classList.add("visible");
+    }
+});
+
+    
