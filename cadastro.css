@@ -25,14 +25,14 @@ input {
 }
 
 /* Estilo do helper (mensagens de erro ou ajuda) */
-.helper {
+.helper-text {
     display: none;
     color: #f00;
     font-size: 12px;
     margin-bottom: 10px;
 }
 
-.helper.visible {
+.helper-text.visible {
     display: block;
 }
 

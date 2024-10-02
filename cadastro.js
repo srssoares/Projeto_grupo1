@@ -82,9 +82,9 @@ telefone.addEventListener("change", function(evento) {
 });
 
 // ---------- VALIDAÇÃO SENHA ---------- //
-let senha = document.getElementById("senha");
+let senha = document.getElementById('senha');
 let senhaLabel = document.querySelector('label[for="senha"]');
-let senhaHelper = document.getElementById("senha-helper");
+let senhaHelper = document.getElementById('senha-helper');
 
 mostrarPopUp(senha, senhaLabel);
 
@@ -105,9 +105,9 @@ senha.addEventListener("change", function(evento) {
 });
 
 // ---------- VALIDAÇÃO CONFIRMAÇÃO DE SENHA ---------- //
-let confirmaSenha = document.getElementById("confirma-senha");
+let confirmaSenha = document.getElementById('confirma-senha');
 let confirmaSenhaLabel = document.querySelector('label[for="confirma-senha"]');
-let confirmaSenhaHelper = document.getElementById("confirma-senha-helper");
+let confirmaSenhaHelper = document.getElementById('confirma-senha-helper');
 
 mostrarPopUp(confirmaSenha, confirmaSenhaLabel);
 
@@ -124,5 +124,33 @@ confirmaSenha.addEventListener("change", function(evento) {
         confirmaSenha.classList.add("error");
         confirmaSenhaHelper.innerText = "As senhas não coincidem.";
         confirmaSenhaHelper.classList.add("visible");
+    }
+});
+
+
+// ---------- VALIDAÇÃO ENDEREÇO ---------- //
+let endereco = document.getElementById('endereco');
+let enderecoLabel = document.querySelector('label[for="endereco"]');
+let enderecoHelper = document.createElement('endereco-helper');
+
+mostrarPopUp(endereco, enderecoLabel)
+
+endereco.addEventListener("change", function(evento) {
+    
+   
+let valor = evento.target.value;
+
+    if (valor.length < 5) {
+        endereco.classList.remove("error");
+        endereco.classList.add("correct");
+        enderecoHelper.classList.remove("visible");
+        
+    } 
+   
+else {
+        endereco.classList.remove("correct");
+        endereco.classList.add("error");
+        enderecoHelper.innerText = "O endereço é obrigatório.";
+        enderecoHelper.classList.add("visible");
     }
 });

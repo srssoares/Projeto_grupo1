@@ -547,7 +547,7 @@ form label {
 form input,
 form select,
 form textarea {
-    margin-bottom: 15px;
+
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -590,14 +590,14 @@ form button:hover {
   }
   
   /* Estilo do helper (mensagens de erro ou ajuda) */
-.helper {
+.helper-text {
     display: none;
-    color: #f00;
-    font-size: 12px;
+    color: rgb(236, 4, 4);
+    font-size: 13px;
     margin-bottom: 10px;
 }
 
-.helper.visible {
+.helper-text.visible {
     display: block;
 }
 
