@@ -6,7 +6,7 @@
     <title>Formulário de Inscrição de Músicos</title>
     <link rel="icon" href="./img/Green_Creative_Music_Logo.webp">
     <link rel="stylesheet" href="./stylei.css">
-    <script src="./cadastro.css" defer></script>
+    <script src="./cadastro.js" defer></script>
 </head>
     
 <body>
@@ -21,15 +21,15 @@
         <form action="/submit" method="post">
             <label for="nome">Nome Completo</label>
             <input type="text" id="nome" name="nome" required>
-            <p id="nome-helper" class="helper-text">Digite seu nome completo.</p>
+            <p id="nome-helper" class="helper-text">mensagem de ajuda.</p>
 
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-            <p id="email-helper" class="helper-text">Digite um email válido.</p>
+            <p id="email-helper" class="helper-text">mensagem de ajuda.</p>
 
             <label for="telefone">Telefone</label>
             <input type="tel" id="telefone" name="telefone" required>
-            <p id="telefone-helper" class="helper-text">Digite um número de telefone válido.</p>
+            <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
 
             <label for="genero">Gênero Musical</label>
             <select id="genero" name="genero" required>
@@ -50,11 +50,11 @@
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>
-            <p id="senha-helper" class="helper-text">Sua senha deve conter ao menos 8 caracteres.</p>
+            <p id="senha-helper" class="helper-text">mensagem de ajuda.</p>
 
             <label for="confirma-senha">Confirmar senha:</label>
             <input type="password" id="confirma-senha" name="confirma-senha" required>
-            <p id="confirma-senha-helper" class="helper-text">Confirme a sua senha.</p>
+            <p id="confirma-senha-helper" class="helper-text">mensagem de ajuda..</p>
 
             <button type="submit">Enviar Inscrição</button>
         </form>
