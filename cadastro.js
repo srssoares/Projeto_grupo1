@@ -140,7 +140,7 @@ endereco.addEventListener("change", function(evento) {
    
 let valor = evento.target.value;
 
-    if (valor.length < 5) {
+    if (valor.length > 5) {
         endereco.classList.remove("error");
         endereco.classList.add("correct");
         enderecoHelper.classList.remove("visible");
