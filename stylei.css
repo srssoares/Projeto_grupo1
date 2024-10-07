@@ -685,7 +685,7 @@ label.required-popup::after {
 /* Encontre um artista*/
 
 .title{
-    background-image: url('./img/fundo_encontre\ um\ artista.jpg'); /* Corrigir a barra invertida */
+    background-image: url('./img/fundo_encontre\ um\ artista.jpg'); 
     background-size: cover;
     background-position: center;
     padding: 0 20px;/* Remover padding superior e inferior */
@@ -751,3 +751,45 @@ label.required-popup::after {
 .dropdowns select:focus {
     border-color: #333;
 }
+
+/*Fale Conosco*/
+.container-fale_conosco{
+    background-image: url('img/fale_conosco.jpg');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.contact-form {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #b4b4b4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Largura do formulário */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #fff; /* Bordas brancas ao focar */
+}
+
