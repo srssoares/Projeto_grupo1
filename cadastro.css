@@ -6,6 +6,20 @@ form {
     font-family: "poppins", sans-serif;
 }
 
+/* Estilizando o link "Cadastre-se" */
+.auth-links a:nth-child(2) {
+    background-color: #f0b70e; /* Cor de fundo padrão */
+    color: #ffffff; /* Cor do texto padrão */
+    padding: 10px 20px; /* Espaçamento interno do link */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* Efeito hover para o link "Cadastre-se" */
+.auth-links a:nth-child(2):hover {
+    background-color: #e2b500; /* Cor de fundo quando o mouse está sobre o link */
+    color: #fff; /* Cor do texto quando o mouse está sobre o link */
+}
+
 label {
     display: block;
     margin-bottom: 8px;
