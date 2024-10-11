@@ -184,7 +184,7 @@ figcaption {
 }
 
 
-/* Estilização do botão */
+
 
 
 /* Responsividade: ajusta a largura dos cards em telas menores */
@@ -302,6 +302,8 @@ figcaption {
 .share-talent-item {
     font-size: 1.2rem;
 }
+
+/* Estilização do botão */
 
 .register-button {
     background-color: #f0b70e;
@@ -509,8 +511,6 @@ figcaption {
     }
 }
 
-/* cadastro de musico
-
 /* Reset básico */
 * {
     margin: 0;
@@ -571,6 +571,8 @@ form textarea {
     resize: vertical;
 }
 
+/* Estilização do botão */
+
 form button , .botao{
     padding: 15px;
     border: none;
@@ -590,10 +592,17 @@ form button:hover {
 
 .container-geral{
     
-    background-image: url('img/fale_conosco.jpg');
+    background-image: url('img/show.jpg');
     background-size: cover; /* Cobre toda a área */
     background-position: center; /* Centraliza a imagem */  
     
+
+}
+
+.container-geral-login {
+    background-image: url('img/banda2.jpg');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */  
 
 }
 
@@ -812,7 +821,7 @@ label.required-popup::after {
 }
 
 /*Fale Conosco*/
-.container-fale_conosco, {
+.container-fale_conosco {
     background-image: url('img/fale_conosco.jpg');
     background-size: cover; /* Cobre toda a área */
     background-position: center; /* Centraliza a imagem */
