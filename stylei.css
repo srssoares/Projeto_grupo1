@@ -98,10 +98,15 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    transition: transform 0.5s; /* Animação de zoom */
 
     /* Máscara para criar a transição suave na parte inferior */
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%);
+}
+
+.hero:hover {
+    transform: scale(1.05); /* Zoom ao passar o mouse */
 }
 
 .hero h1 {
@@ -195,18 +200,38 @@ figcaption {
     text-align: center;
 }
 
+.py-5 .left-align {
+    text-align: left; /* Adiciona uma classe para alinhar à esquerda */
+}
+
 .py-5 h2 {
     font-size: 2rem;
     border-bottom: 2px solid #000000;
     padding-bottom: 20px;
     margin-bottom: 1rem;
+    text-align: left; /* Alinha o título à esquerda */
 }
 
 .py-5 p {
     font-size: 1.2rem;
     line-height: 1.6;
-    margin: 0 auto;
+    margin: 0; /* Remove margens adicionais */
     max-width: 800px; /* Limitar a largura do texto */
+    text-align: left; /* Alinha o parágrafo à esquerda */
+}
+
+/* Para garantir que a imagem e o texto não se sobreponham e que a imagem esteja alinhada corretamente */
+.py-5 img {
+    max-width: 100%; /* Garante que a imagem não exceda o tamanho do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 20px; /* Adiciona um espaço acima da imagem se necessário */
+    margin-left: 20px; /* Adiciona um espaço à esquerda da imagem, se necessário */
+    margin-right: 600px;
+}
+
+.py-5 .row {
+    display: flex; /* Utiliza flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
 }
 
 /* Seção Sobre Nós */
@@ -316,9 +341,19 @@ figcaption {
 }
 
 .testimonial-item {
-    max-width: 300px;
-    text-align: center;
-    margin-bottom: 20px;
+    background: #b4b4b4; /* Fundo do item */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%; /* Largura dos itens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.testimonial-item:hover {
+    transform: translateY(-10px); /* Salta para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
 
 .testimonial-img {
