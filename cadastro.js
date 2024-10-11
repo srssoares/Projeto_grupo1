@@ -192,3 +192,23 @@ const urlPattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
 });
 
     
+function showForm(formType) {
+    // Esconde todos os formulários
+    document.getElementById('form-estabelecimento').style.display = 'none';
+    document.getElementById('form-musico').style.display = 'none';
+    document.getElementById('form-cliente').style.display = 'none';
+
+    // Mostra o formulário selecionado
+    if (formType === 'estabelecimento') {
+        document.getElementById('form-estabelecimento').style.display = 'block';
+    } else if (formType === 'musico') {
+        document.getElementById('form-musico').style.display = 'block';
+    } else if (formType === 'cliente') {
+        document.getElementById('form-cliente').style.display = 'block';
+    }
+}
+
+// Mostra o primeiro formulário por padrão (opcional)
+window.onload = function() {
+    showForm('estabelecimento'); // Escolha qual formulário mostrar por padrão
+};

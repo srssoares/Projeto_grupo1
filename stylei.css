@@ -15,19 +15,6 @@ body {
     height: 100%;
 }
 
-header {
-    background: rgba(51, 51, 51, 0.5); /* Cor de fundo transparente */
-    color: white;
-    padding: 10px 20px; /* Espaçamento interno ajustado */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed; /* Fixar o menu no topo */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Garantir que o header esteja acima de outros elementos */
-}
 
 /* Estilizando o link "Cadastre-se" */
 .auth-links a:nth-child(2) {
@@ -235,6 +222,7 @@ figcaption {
 .about-us-text {
     flex: 1;
     max-width: 50%;
+    
 }
 
 .about-us-text h2 {
@@ -515,24 +503,14 @@ figcaption {
     font-weight: bold;
 }
 
-/* Container principal */
-.container-cadastro {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 20px;
-    background-color: #b4b4b4;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.container-cadastro h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333;
-}
+
+
+
 
 /* Estilização do formulário */
+
+
 form {
     display: flex;
     flex-direction: column;
@@ -558,7 +536,7 @@ form textarea {
     resize: vertical;
 }
 
-form button {
+form button , .botao{
     padding: 15px;
     border: none;
     border-radius: 4px;
@@ -575,6 +553,46 @@ form button:hover {
 }
 
 
+.container-geral{
+    
+    background-image: url('img/fale_conosco.jpg');
+    background-size: cover; /* Cobre toda a área */
+    background-position: center; /* Centraliza a imagem */  
+    
+
+}
+
+.container-cadastro {
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 65px; 
+}
+
+
+    
+
+.container-cadastro h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+
+
+
+
+.button-container {
+    margin-bottom: 20px;
+    
+}    
+
+
+
+
+
+
   /* ---------- Estilos dinâmicos ---------- */
 .required-popup::after {
     content: "*Campo obrigatório";
@@ -587,6 +605,10 @@ form button:hover {
     width: auto;
     display: block;
     background-color: #202020;
+    
+   
+    
+    
   }
   
   /* Estilo do helper (mensagens de erro ou ajuda) */
@@ -614,12 +636,14 @@ input.error {
 /* Ajustes de posição do popup */
 label.required-popup {
     position: relative;
+    
 }
 
 label.required-popup::after {
     left: calc(100% + 10px);
     top: 0;
     white-space: nowrap;
+   
 }
 
 /* Estilização do Footer */
@@ -753,10 +777,16 @@ label.required-popup::after {
 }
 
 /*Fale Conosco*/
-.container-fale_conosco{
+.container-fale_conosco, {
     background-image: url('img/fale_conosco.jpg');
     background-size: cover; /* Cobre toda a área */
     background-position: center; /* Centraliza a imagem */
+    display: flex;   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 50px; 
+
 }
 
 h1 {
@@ -764,9 +794,9 @@ h1 {
     font-size: 30px;
 }
 
-.contact-form {
+.contact-form , .form-container{
     max-width: 800px;
-    margin: 80px auto;
+    margin-bottom: 20px;
     padding: 20px;
     background-color: #b4b4b4;
     border: 1px solid #ddd;
@@ -792,4 +822,8 @@ input:focus, textarea:focus {
     outline: none;
     border: 1px solid #fff; /* Bordas brancas ao focar */
 }
+
+
+
+
 
