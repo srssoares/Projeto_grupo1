@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { name: 'Artista 4', description: 'Descrição do Artista 4' },
         ];
         return allResults.filter(result => {
-            // lógica de filtro aqui
+            // Lógica de filtro aqui (pode ser alterada conforme necessário)
             return true;
         });
     }
@@ -59,4 +59,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const results = fetchResults(filters);
         displayResults(results);
     });
+
+    // Funcionalidade do menu hambúrguer
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Alternância de imagens de fundo
+    const images = [
+        './img/fundo 02.jpg', // Substitua pelos seus arquivos de imagem
+        '',
+        './img/fundo04.jpg',
+        './img/fundo01.jpg'
+    ];
+
+    let currentImageIndex = 0;
+    const shareTalentSection = document.getElementById('share-talent');
+
+    function changeBackgroundImage() {
+        shareTalentSection.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        currentImageIndex = (currentImageIndex + 1) % images.length; // Alterna entre as imagens
+    }
+
+    // Troca de imagem a cada 5 segundos (5000 ms)
+    setInterval(changeBackgroundImage, 5000);
+
+    // Definindo a primeira imagem imediatamente
+    changeBackgroundImage();
 });

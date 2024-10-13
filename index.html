@@ -12,6 +12,11 @@
         <div class="logo">
             <img src="./img/logo.png" alt="Logo Ibar" width="80">
         </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav class="nav-links">
             <a href="./index.html">Página Inicial</a>
             <a href="#testimonials">Depoimentos</a>
@@ -29,7 +34,7 @@
     <!-- Seção do título e imagem de fundo -->
     <section class="hero">
         <div class="container">
-            <h1 class="display-4">Conectando talentos, criando experiências</h1>
+            <h1 class="display-4">Conectando talentos, <span class="sublinhado">criando</span> experiências</h1>
         </div>
     </section>
 
@@ -37,11 +42,11 @@
     <section class="py-5">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
+                <div class="col-md-6 papel">
                     <h2>Estamos aqui para ajudar você a encontrar o profissional perfeito para a sua necessidade</h2>
                     <p>Criada para conectar músicos a bares e eventos, nossa plataforma facilita a comunicação e a contratação de artistas, tornando a música ao vivo acessível e vibrante para todos.</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 papel-imagem">
                     <img src="./img/pexels-yankrukov-9009532.jpg" class="img-fluid" alt="Imagem Lado Direito" style="width: 15cm; height: 20cm; object-fit: cover;"> 
                 </div>
             </div>
@@ -49,7 +54,7 @@
     </section>
 
     <!-- Seção de compartilhamento de talento -->
-    <section class="share-talent">
+    <section id="share-talent" class="share-talent">
         <div class="share-talent-content">
             <h2>Compartilhe seu talento</h2>
             <div class="share-talent-info">
@@ -82,6 +87,43 @@
 
             </div>            
     </section>
+
+<!-- Seção do título e imagem de fundo -->
+<section class="hero-servicos">
+    <div class="container">
+        <h1 class="display-4">A música nos conecta.</h1>
+    </div>
+</section>
+
+<main class="main">
+    <section class="py-5 servicos">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>Venha conhecer a maior comunidade musical do Brasil</h2>
+                    <p>Conte com nossa AI para encontrar o que você precisa. Cadastre-se agora e baixe nosso app gratuitamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="paineis">
+        <figure class="card">
+            <img src="./img/banda2.jpg" class="image-register-service" alt="homen cantando para a multidão">
+            <figcaption>Encontre o happy hour perfeito para você, sua família e amigos.</figcaption>
+            <button type="button" class="register-button" disabled>Cadastrar</button>
+        </figure>
+        <figure class="card">
+            <img src="./img/dj2.jpg" class="image-register-service" alt="dj tocando para várias pessoas">
+            <figcaption>Contrate o profissional ideal para seu estabelecimento ou evento.</figcaption>
+            <button type="button" class="register-button" disabled>Cadastrar</button>
+        </figure>
+        <figure class="card">
+            <img src="./img/jazz.jpg" class="image-register-service" alt="mulher cantando sentada">
+            <figcaption>Divulgue seu talento e descubra novas oportunidades de trabalho.</figcaption>
+            <button type="button" class="register-button" disabled>Cadastrar</button>
+        </figure>
+    </section>
+</main>
 
     <!-- Seção sobre nós -->
     <section id="about-us" class="about-us">
