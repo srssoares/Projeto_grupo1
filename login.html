@@ -1,76 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Inscrição para Clientes</title>
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Inscrição para Estabelecimentos</title>
-    <l<link rel="icon" href="./img/Green_Creative_Music_Logo.webp">
-    <link rel="stylesheet" href="stylei.css">
-    <script src="script.js" defer></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="./stylei.css"> <!-- Link para o seu CSS -->
 </head>
-
 <body>
-    <body>
-        <header class="navbar">
-            <div class="logo">
-                <img src="./img/logo.png" alt="Logo Ibar" width="80">
-            </div>
-            <div class="auth-links"></div>
-                <a href="#"><button type="button" class="register-button">Voltar</button></a>
-            </div>
-           
-        </header>
-    
 
-    <div class="container-cadastro">
-        <h1>Inscrição para Cliente</h1>
-        <form action="/submit" method="post">
-            <label for="nome">Nome do Estabelecimento</label>
-            <input type="text" id="nome" name="nome" required>
-            <p id="nome-helper" class="helper-text">mensagem de ajuda.</p>
-    
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <p id="email-helper" class="helper-text">mensagem de ajuda.</p>
-    
-            <label for="telefone">Telefone</label>
-            <input type="tel" id="telefone" name="telefone" required>
-            <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
-    
-            <label for="endereco">Endereço</label>
-            <input type="text" id="endereco" name="endereco" required>
-    
-            <label for="tipo_musica">Tipo de Música Desejada</label>
-            <select id="tipo_musica" name="tipo_musica" required>
-                <option value="rock">Rock</option>
-                <option value="pop">Pop</option>
-                <option value="jazz">Jazz</option>
-                <option value="blues">Blues</option>
-                <option value="sertanejo">Sertanejo</option>
-                <option value="mpb">MPB</option>
-                <option value="outro">Outro</option>
-            </select>
-    
-            <label for="descricao_evento">Descrição do Evento</label>
-            <textarea id="descricao_evento" name="descricao_evento" rows="4" required></textarea>
+    <!-- Header -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo Ibar" width="80">
+        </div>
+        <nav class="nav-links">
+            <a href="./index.html">Página Inicial</a>
+            <a href="#testimonials">Depoimentos</a>
+            <a href="#about-us">Sobre Nós</a>
+            <a href="./encontre_um_artista.html">Encontre um Artista</a>
+            <a href="./servico.html">Serviços</a>
+            <a href="./fale_conosco.html">Fale Conosco</a>
+        </nav>
+        <div class="auth-links">
+            <a href="./login.html">Entrar</a>
+            <a href="./cadastros.html">Cadastre-se</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="container-geral-login">
+        <div class="container-cadastro">
             
-            <label for="senha">*Senha:</label>
-            <input type="password" id="senha" name="senha">
-            <p id="senha-helper" class="helper-text">Mensagem de ajuda</p>
-        
-            <label for="confirma-senha">*Confirmar senha:</label>
-            <input type="password" id="confirma-senha" name="confirma-senha">
-            <p id="confirma-senha-helper" class="helper-text">Mensagem de ajuda</p>
-    
-            <button type="submit">Enviar Inscrição</button>
-        </form>
+            <form class="form-container" id="loginForm">
+                <h1>Login</h1>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+
+                <div class="button-container">
+                    <button type="submit">Entrar</button>
+                </div>
+                <p>Não tem uma conta? <a href="./cadastros.html">Cadastre-se aqui</a></p>
+            </form>
+        </div>
     </div>
+
+    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-content">
             <div class="left">
@@ -95,3 +72,4 @@
         </div>
     </footer>
 </body>
+</html>

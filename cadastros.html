@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição de Músicos</title>
+    <link rel="icon" href="./img/Green_Creative_Music_Logo.webp">
+    <link rel="stylesheet" href="./stylei.css">
+    <script src="./cadastro.js" defer></script>
+</head>
+    
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo Ibar" width="80">
+        </div>
+        <nav class="nav-links">
+            <a href="./index.html">Página Inicial</a>
+            <a href="#testimonials">Depoimentos</a>
+            <a href="#about-us">Sobre Nós</a>
+            <a href="./encontre_um_artista.html">Encontre um Artista</a>
+            <a href="./servico.html">Serviços</a>
+            <a href="./fale_conosco.html">Fale Conosco</a>
+        </nav>
+        <div class="auth-links">
+            <a href="./login.html">Entrar</a>
+            <a href="./cadastros.html">Cadastre-se</a>
+        </div>
+    </header>
+   
+
+
+
+
+    <div class="container-geral">
+        <div class="container-cadastro">
+           
+            <div class="button-container">
+                <button class="botao" onclick="showForm('estabelecimento')">Estabelecimento</button>
+                <button class="botao" onclick="showForm('musico')">Músico</button>
+                <button class="botao" onclick="showForm('cliente')">Cliente</button>
+            </div>
+
+            <!-- Formulário para Estabelecimentos -->
+            <div id="form-estabelecimento" class="form-container">
+                <h2>Inscrição para Estabelecimentos</h2>
+                <form action="/submit" method="post">
+                    <label for="nome">Nome do Estabelecimento</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <p id="nome-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <p id="email-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                    <label for="tipo_musica">Tipo de Música Desejada</label>
+                    <select id="tipo_musica" name="tipo_musica" required>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="blues">Blues</option>
+                        <option value="sertanejo">Sertanejo</option>
+                        <option value="mpb">MPB</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <label for="descricao_evento">Descrição do local</label>
+                    <textarea id="descricao_evento" name="descricao_evento" rows="4" required></textarea>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                    <p id="senha-helper" class="helper-text">Mensagem de ajuda</p>
+                    <label for="confirma-senha">Confirmar senha</label>
+                    <input type="password" id="confirma-senha" name="confirma-senha">
+                    <p id="confirma-senha-helper" class="helper-text">Mensagem de ajuda</p>
+                    <button type="submit">Enviar Inscrição</button>
+                </form>
+            </div>
+
+            <!-- Formulário para Músicos -->
+            <div id="form-musico" class="form-container">
+                <h2>Inscrição para Músicos</h2>
+                <form action="/submit" method="post">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <p id="nome-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <p id="email-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="genero">Gênero Musical</label>
+                    <select id="genero" name="genero" required>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="blues">Blues</option>
+                        <option value="sertanejo">Sertanejo</option>
+                        <option value="mpb">MPB</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <label for="link_musica">Link para Música ou Vídeo</label>
+                    <input type="url" id="link_musica" name="link_musica" required>
+                    <p id="link-musica-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="descricao">Descrição (Conte-nos mais sobre você e sua música)</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <p id="senha-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="confirma-senha">Confirmar senha</label>
+                    <input type="password" id="confirma-senha" name="confirma-senha" required>
+                    <p id="confirma-senha-helper" class="helper-text">mensagem de ajuda.</p>
+                    <button type="submit">Enviar Inscrição</button>
+                </form>
+            </div>
+
+            <!-- Formulário para Clientes -->
+            <div id="form-cliente" class="form-container">
+                <h2>Inscrição para Clientes</h2>
+                <form action="/submit" method="post">
+                    <label for="nome">Nome do Estabelecimento</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <p id="nome-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <p id="email-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                    <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                    <label for="tipo_musica">Tipo de Música Desejada</label>
+                    <select id="tipo_musica" name="tipo_musica" required>
+                        <option value="rock">Rock</option>
+                        <option value="pop">Pop</option>
+                        <option value="jazz">Jazz</option>
+                        <option value="blues">Blues</option>
+                        <option value="sertanejo">Sertanejo</option>
+                        <option value="mpb">MPB</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <label for="descricao_evento">Descrição do Evento</label>
+                    <textarea id="descricao_evento" name="descricao_evento" rows="4" required></textarea>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <p id="senha-helper" class="helper-text">Mensagem de ajuda</p>
+                    <label for="confirma-senha">Confirmar senha</label>
+                    <input type="password" id="confirma-senha" name="confirma-senha" required>
+                    <p id="confirma-senha-helper" class="helper-text">Mensagem de ajuda</p>
+                    <button type="submit">Enviar Inscrição</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="left">
+                <div class="logo">Ibar</div>
+                <div>© 2024 Ibar. Todos os direitos reservados.</div>
+                <div>Contato: <a href="mailto:contato@ibar.com.br">contato@ibar.com.br</a></div>
+            </div>
+            <div class="center social-icons">
+                <a href="#" title="Facebook">
+                    <!-- SVG Facebook -->
+                </a>
+                <a href="#" title="Instagram">
+                    <!-- SVG Instagram -->
+                </a>
+                <a href="mailto:contato@ibar.com.br" title="Email">
+                    <!-- SVG Email -->
+                </a>
+                <a href="#" title="WhatsApp">
+                    <!-- SVG WhatsApp -->
+                </a>
+            </div>
+            <div class="right">
+                <div>Baixe nosso App</div>
+                <div class="app-links">
+                    Disponível para iOS e Android:<br>
+                    <a href="#">App Store</a><br>
+                    <a href="#">Google Play</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
