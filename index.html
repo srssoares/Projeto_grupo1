@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibar</title>
     <link rel="icon" href="./img/Green_Creative_Music_Logo.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="stylei.css">
     <script src="script.js" defer></script>
 </head>
@@ -19,13 +20,26 @@
             <span class="bar"></span>
         </div>
         <nav class="nav-links">
-            <a href="./index.html">Página Inicial</a>
-            <a href="#testimonials">Depoimentos</a>
-            <a href="#about-us">Sobre Nós</a>
-            <a href="./encontre_um_artista.html">Encontre um Artista</a>
-            <a href="./servico.html">Serviços</a>
-            <a href="./fale_conosco.html">Fale Conosco</a>
+            <ul>
+                <li class="drop-hover"><a href="./index.html">Página Inicial<i class="bi bi-caret-down-fill"></i></a>
+                    <div class="drop">
+                        <a href="#testimonials">Depoimentos</a>
+                        <a href="#about-us">Sobre Nós</a>
+
+                    </div>
+                </li>
+                <li>
+                    <a href="./encontre_um_artista.html">Encontre um Artista</a>
+                </li>
+                <li>
+                    <a href="./servico.html">Serviços</a>
+                </li>
+                <li>
+                    <a href="./fale_conosco.html">Fale Conosco</a>
+                </li>
+            </ul>            
         </nav>
+
         <div class="auth-links">
             <a href="./login.html">Entrar</a>
             <a href="./cadastros.html">Cadastre-se</a>
@@ -111,17 +125,17 @@
         <figure class="card">
             <img src="./img/banda2.jpg" class="image-register-service" alt="homen cantando para a multidão">
             <figcaption>Encontre o happy hour perfeito para você, sua família e amigos.</figcaption>
-            <button type="button" class="register-button" disabled>Cadastrar</button>
+            
         </figure>
         <figure class="card">
             <img src="./img/dj2.jpg" class="image-register-service" alt="dj tocando para várias pessoas">
             <figcaption>Contrate o profissional ideal para seu estabelecimento ou evento.</figcaption>
-            <button type="button" class="register-button" disabled>Cadastrar</button>
+            
         </figure>
         <figure class="card">
             <img src="./img/jazz.jpg" class="image-register-service" alt="mulher cantando sentada">
             <figcaption>Divulgue seu talento e descubra novas oportunidades de trabalho.</figcaption>
-            <button type="button" class="register-button" disabled>Cadastrar</button>
+           
         </figure>
     </section>
 </main>

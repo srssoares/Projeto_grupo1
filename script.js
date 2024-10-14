@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Alternância de imagens de fundo
     const images = [
         './img/fundo 02.jpg', // Substitua pelos seus arquivos de imagem
-        '',
+        './img/fundo03.jpg',
         './img/fundo04.jpg',
         './img/fundo01.jpg'
     ];
@@ -91,4 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Definindo a primeira imagem imediatamente
     changeBackgroundImage();
+});
+
+document.getElementById('menuToggle').addEventListener('click', function() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active'); // Adiciona ou remove a classe 'active'
 });

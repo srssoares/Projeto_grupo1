@@ -131,7 +131,7 @@ confirmaSenha.addEventListener("change", function(evento) {
 // ---------- VALIDAÇÃO ENDEREÇO ---------- //
 let endereco = document.getElementById('endereco');
 let enderecoLabel = document.querySelector('label[for="endereco"]');
-let enderecoHelper = document.createElement('endereco-helper');
+let enderecoHelper = document.getElementById('endereco-helper');
 
 mostrarPopUp(endereco, enderecoLabel)
 

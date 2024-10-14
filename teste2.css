@@ -1,0 +1,34 @@
+.nav-links {
+    display: flex;
+    flex-direction: column; /* Para que os itens fiquem em coluna */
+    position: fixed; /* Fixa no lado esquerdo da tela */
+    top: 60px; /* Para abaixo da navbar */
+    left: -100%; /* Inicialmente fora da tela */
+    background-color: rgba(51, 51, 51, 0.8);
+    width: 250px; /* Largura da barra lateral */
+    height: calc(100vh - 60px); /* Altura da tela menos a altura da navbar */
+    transition: left 0.3s ease; /* Transição suave */
+    z-index: 999; /* Garante que fique sobre outros elementos */
+}
+
+.nav-links.active {
+    left: 0; /* Mostra a barra ao adicionar a classe 'active' */
+}
+
+.menu-toggle {
+    display: flex;
+    cursor: pointer;
+}
+
+/* Adicione estilos para a auth-links para que fiquem visíveis na barra lateral */
+.auth-links {
+    display: flex;
+    flex-direction: column; /* Itens em coluna na barra lateral */
+    position: absolute;
+    top: 20px; /* Um pouco abaixo da parte superior */
+    left: 20px; /* Distância da borda esquerda */
+}
+
+.auth-links a {
+    margin: 10px 0; /* Espaçamento entre os links */
+}
