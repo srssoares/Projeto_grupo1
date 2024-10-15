@@ -37,6 +37,7 @@ CREATE TABLE publico (
     senha VARCHAR(255) NOT NULL
 );
 
+
 -- Criação da tabela de Contratos (ou Eventos)
 CREATE TABLE Contratos (
     id SERIAL PRIMARY KEY,
@@ -45,6 +46,21 @@ CREATE TABLE Contratos (
     data DATE NOT NULL,
     FOREIGN KEY (id_cliente) REFERENCES Clientes(id),  -- Chave estrangeira
     FOREIGN KEY (id_musico) REFERENCES Musicos(id)     -- Chave estrangeira
+);
+
+-- Criação da tabela de Estados
+CREATE TABLE Estados (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    sigla VARCHAR(2) NOT NULL UNIQUE
+);
+
+-- Criação da tabela de Cidades
+CREATE TABLE Cidades (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    id_estado INT NOT NULL,
+    FOREIGN KEY (id_estado) REFERENCES Estados(id)  -- Chave estrangeira
 );
 
 -- Índices para otimizar consultas nos emails
