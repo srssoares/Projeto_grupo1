@@ -4,10 +4,12 @@ CREATE TABLE Estabelecimentos (
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     telefone VARCHAR(20) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
-    cidade VARCHAR(50) NOT NULL,
+    id_estado INT NOT NULL,
+    id_cidade INT NOT NULL,
     tipo_musica VARCHAR(50) NOT NULL,
-    senha VARCHAR(255) NOT NULL
+    senha VARCHAR(255) NOT NULL,
+    FOREIGN KEY (id_estado) REFERENCES Estados(id),
+    FOREIGN KEY (id_cidade) REFERENCES Cidades(id)
 );
 
 -- Criação da tabela de Músicos
@@ -16,27 +18,30 @@ CREATE TABLE Musicos (
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     telefone VARCHAR(20) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
-    cidade VARCHAR(50) NOT NULL,
+    id_estado INT NOT NULL,
+    id_cidade INT NOT NULL,
     tipo_musica VARCHAR(50) NOT NULL,
     link_musica VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
     id_estabelecimento INT,  -- Adicionando a referência ao estabelecimento
-    FOREIGN KEY (id_estabelecimento) REFERENCES Estabelecimentos(id)  -- Chave estrangeira
+    FOREIGN KEY (id_estabelecimento) REFERENCES Estabelecimentos(id),
+    FOREIGN KEY (id_estado) REFERENCES Estados(id),
+    FOREIGN KEY (id_cidade) REFERENCES Cidades(id)
 );
 
--- Criação da tabela de publico
-CREATE TABLE publico (
+-- Criação da tabela de Clientes
+CREATE TABLE Clientes (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     telefone VARCHAR(20) NOT NULL,
-    estado VARCHAR(50) NOT NULL,
-    cidade VARCHAR(50) NOT NULL,
+    id_estado INT NOT NULL,
+    id_cidade INT NOT NULL,
     tipo_musica VARCHAR(50) NOT NULL,
-    senha VARCHAR(255) NOT NULL
+    senha VARCHAR(255) NOT NULL,
+    FOREIGN KEY (id_estado) REFERENCES Estados(id),
+    FOREIGN KEY (id_cidade) REFERENCES Cidades(id)
 );
-
 
 -- Criação da tabela de Contratos (ou Eventos)
 CREATE TABLE Contratos (
@@ -66,5 +71,5 @@ CREATE TABLE Cidades (
 -- Índices para otimizar consultas nos emails
 CREATE UNIQUE INDEX idx_estabelecimento_email ON Estabelecimentos (email);
 CREATE UNIQUE INDEX idx_musico_email ON Musicos (email);
+CREATE UNIQUE INDEX idx_cliente_email ON Clientes (email);
 
-CREATE UNIQUE INDEX idx_cliente_email ON publico (email);
