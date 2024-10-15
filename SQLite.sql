@@ -25,8 +25,8 @@ CREATE TABLE Musicos (
     FOREIGN KEY (id_estabelecimento) REFERENCES Estabelecimentos(id)  -- Chave estrangeira
 );
 
--- Criação da tabela de Clientes
-CREATE TABLE Clientes (
+-- Criação da tabela de publico
+CREATE TABLE publico (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
