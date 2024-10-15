@@ -129,32 +129,32 @@ confirmaSenha.addEventListener("change", function(evento) {
 
 
 // ---------- VALIDAÇÃO ENDEREÇO ---------- //
-let endereco = document.getElementById('endereco');
-let enderecoLabel = document.querySelector('label[for="endereco"]');
-let enderecoHelper = document.getElementById('endereco-helper');
-
-mostrarPopUp(endereco, enderecoLabel)
-
-endereco.addEventListener("change", function(evento) {
+document.getElementById('estado').addEventListener('change', function() {
+    const estado = this.value;
+    const cidadeSelect = document.getElementById('cidade');
     
-   
-let valor = evento.target.value;
-
-    if (valor.length > 5) {
-        endereco.classList.remove("error");
-        endereco.classList.add("correct");
-        enderecoHelper.classList.remove("visible");
-        
-    } 
-   
-else {
-        endereco.classList.remove("correct");
-        endereco.classList.add("error");
-        enderecoHelper.innerText = "O endereço é obrigatório.";
-        enderecoHelper.classList.add("visible");
+    // Limpa as opções atuais de cidade
+    cidadeSelect.innerHTML = '<option value="">Selecione a Cidade</option>';
+    
+    // Define as cidades para cada estado (exemplo com alguns estados)
+    const cidadesPorEstado = {
+        'SP': ['São Paulo', 'Campinas', 'Santos'],
+        'RJ': ['Rio de Janeiro', 'Niterói', 'Petrópolis'],
+        'MG': ['Belo Horizonte', 'Uberlândia', 'Juiz de Fora'],
+        'ES': ['Vitória', 'Vila Velha', 'Guarapari']
+        // Adicione mais estados e cidades conforme necessário
+    };
+    
+    // Adiciona as cidades relacionadas ao estado selecionado
+    if (cidadesPorEstado[estado]) {
+        cidadesPorEstado[estado].forEach(function(cidade) {
+            const option = document.createElement('option');
+            option.value = cidade;
+            option.textContent = cidade;
+            cidadeSelect.appendChild(option);
+        });
     }
 });
-
 
 // ---------- VALIDAÇÃO LINK PARA MÚSICA OU VÍDEO ---------- //
 let linkMusica = document.getElementById('link_musica');

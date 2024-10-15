@@ -72,8 +72,21 @@
                     <label for="telefone">Telefone</label>
                     <input type="tel" id="telefone" name="telefone" required>
                     <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco" required>
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione o Estado</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        
+                    </select>
+
+                    <label for="cidade">Cidade</label>
+                    <select id="cidade" name="cidade" required>
+                        <option value="">Selecione a Cidade</option>
+                        <!-- Cidades serão preenchidas dinamicamente com JavaScript -->
+                    </select>
                     <label for="tipo_musica">Tipo de Música Desejada</label>
                     <select id="tipo_musica" name="tipo_musica" required>
                         <option value="rock">Rock</option>
@@ -107,6 +120,22 @@
                     <label for="telefone">Telefone</label>
                     <input type="tel" id="telefone" name="telefone" required>
                     <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione o Estado</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        
+                    </select>
+
+                    <label for="cidade">Cidade</label>
+                    <select id="cidade" name="cidade" required>
+                        <option value="">Selecione a Cidade</option>
+                        <!-- Cidades serão preenchidas dinamicamente com JavaScript -->
+                    </select>
+
                     <label for="genero">Gênero Musical</label>
                     <select id="genero" name="genero" required>
                         <option value="rock">Rock</option>
@@ -130,11 +159,11 @@
                 </form>
             </div>
 
-            <!-- Formulário para Clientes -->
+            <!-- Formulário para Público -->
             <div id="form-cliente" class="form-container">
-                <h2>Inscrição para Clientes</h2>
+                <h2>Inscrição para Público</h2>
                 <form action="/submit" method="post">
-                    <label for="nome">Nome do Estabelecimento</label>
+                    <label for="nome">Nome Completo</label>
                     <input type="text" id="nome" name="nome" required>
                     <p id="nome-helper" class="helper-text">mensagem de ajuda.</p>
                     <label for="email">Email</label>
@@ -143,8 +172,21 @@
                     <label for="telefone">Telefone</label>
                     <input type="tel" id="telefone" name="telefone" required>
                     <p id="telefone-helper" class="helper-text">mensagem de ajuda.</p>
-                    <label for="endereco">Endereço</label>
-                    <input type="text" id="endereco" name="endereco" required>
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione o Estado</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="ES">Espírito Santo</option>
+                        
+                    </select>
+
+                    <label for="cidade">Cidade</label>
+                    <select id="cidade" name="cidade" required>
+                        <option value="">Selecione a Cidade</option>
+                        <!-- Cidades serão preenchidas dinamicamente com JavaScript -->
+                    </select>
                     <label for="tipo_musica">Tipo de Música Desejada</label>
                     <select id="tipo_musica" name="tipo_musica" required>
                         <option value="rock">Rock</option>
